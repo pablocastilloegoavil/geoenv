@@ -1,0 +1,399 @@
+//FONTS
+@import "modules/fonts"
+//RESET
+@import "modules/reset"
+//FORMULARIOS
+@import "modules/form"
+//POPUP TRABAJA CON JQUERY
+@import "modules/poptrox"
+
+
+/* Basic */
+@-ms-viewport
+	width: device-width
+
+//VARIABLES COLORES/RUTAS
+html
+	@import "modules/variables"
+ 
+body
+	height: 100vh
+	width: 100uv
+	text-decoration: none
+	color: var(--primary)
+
+body, input, textarea, select, p
+	font-family: "Roboto", sans-serif
+	font-weight: 300
+	line-height: 1.5
+	letter-spacing: 0.025rem
+p
+	font-size: 1.1rem
+  margin: 0.2rem auto
+h1, h2, h3, h4, h5, h6
+	font-weight: bold
+	color: inherit
+	letter-spacing: -0.0325em
+	text-align: center
+	font-family: 'Roboto', san-serif
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+	color: inherit
+	text-decoration: none
+a
+	text-decoration: none
+	color: var(--primary)
+
+h1
+	display: none
+	font-size: 1.5rem
+	line-height: 1.5rem
+	@media screen and(min-width: 768px)
+		font-size: 2.2rem
+		line-height: 2.2rem
+
+h2
+	font-size: 1.1rem
+	line-height: 2rem
+	@media screen and(min-width: 768px)
+		font-size: 2rem
+		line-height: 2
+h3
+	font-size: 1rem
+	line-height: 1
+	color: #999
+	@media screen and(min-width: 768px)
+		font-size: 1.6rem
+		line-height: 1.6
+		padding-bottom: 0.5em
+
+.active
+	background: #000 !important
+
+.fullscreen
+	height: 100vh
+	
+.shadow
+	box-shadow: 8px 8px 2px rgba(0,0,0,0.7)
+
+.cflex
+	display: flex
+	flex-direction: column
+	justify-content: center
+	position: relative
+	margin: 0
+	overflow-x: hidden
+	overflow-y: hidden
+	justify-content: center
+	
+.rflex
+	display: flex
+	flex-direction: column
+	position: relative
+	justify-content: center
+	margin: 0
+	@media screen and(min-width: 768px)
+		flex-direction: row
+		
+.consultas
+	flex-basis: 50%
+	margin: auto 10px
+	padding: 10px
+	background: var(--bgcolor1)
+.ocultar
+	display: none
+	@media screen and(min-width: 768px)
+		display: block
+.txtshadow
+	text-shadow: var(--txtshadow)
+
+.direccion
+	padding: 5px 15px 5px 15px
+	width: 100%
+	background: black
+
+.direccion p
+	font-size: 1rem
+	line-height: 1
+
+.mapa
+	padding: 10px 3px 0 3px
+	width: 100%
+	height: 40vh
+	
+
+.header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 2000
+	height: 24px
+	background: var(--bgcolor2)
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.3)
+	display: flex
+	justify-content: space-between
+	align-items: center
+	@media screen and(min-width: 768px)
+		height: 90px
+	
+.logo
+	position: relative
+	display: none
+	& img
+		display: none
+	@media screen and(min-width: 1000px)
+		display: flex
+		flex-basis: 30% 
+		flex: auto
+		align-items: center
+		& img
+			display: block
+			width: 360px
+			padding: 0.5rem
+			border: 4px solid transparent
+		
+.nav
+	position: relative
+	height: 100%
+	display: block
+	width: 100%
+	background: var(--bgcolor2)
+	@media screen and(min-width: 768px)
+		display: flex
+		
+#toggle-menu
+	position: absolute
+	display: block
+	width: 100%
+	padding: 0.5rem
+	background: var(--bgcolor1)
+	text-transform: uppercase
+	text-align: left
+	@media screen and(min-width: 768px)
+		display: none
+	
+.menu
+	position: relative
+	left: 0
+	top: 37px
+	line-height: 1.5 
+	list-style: none
+	text-transform: uppercase
+	display: block
+	width: 100%
+	display: none
+	& a
+			display: block
+			padding: 0.5rem 0 0.5rem 0.5rem
+			background: var(--bgcolor1)
+			border: 1px solid rgba(255,255,255,0.3)
+			font-size: 0.9rem
+	& a:hover
+			width: 100%
+			background: black
+		
+	@media screen and(min-width: 768px)
+		display: flex
+		width: 100%
+		top: 0
+		align-self: center
+		justify-content: flex-end
+		
+		li
+			border-bottom: 1px solid white
+			font-weight: bold
+			font-size: 1rem
+			border-left: 1px solid white
+			&:last-child
+			border-right: none
+			a
+				font-size: 0.8rem
+				padding-left: 0
+				background: var(--bgcolor1)
+				display: block
+				color: var(--primary)
+				padding: 1rem 2rem
+				text-decoration: none
+				line-height: 1.5
+				text-align: center
+				&:hover
+					font-size: 0.8rem
+					z-index: 200
+					background: #000
+	@media screen and(min-width: 1200px)
+		li
+			a
+				font-size: 1rem
+				&:hover
+					font-size: 1rem
+	
+
+
+=bgimagenes($name)
+	background: url("../images/" + $name)
+	background-attachment: scroll
+	background-position: top center
+	background-repeat: no-repeat
+	background-size: 100% 100%
+
+///* Intro */
+.bgintro
+	+bgimagenes("inicio-s.jpg")
+	@media screen and(min-width: 768px)
+		+bgimagenes("inicio-xl.jpg")
+
+.lema
+	align-self: center
+	font-family: 'Roboto Slab' , sans-serif
+	line-height: 1.5
+	text-align: center
+	margin: 0 auto
+	padding: 1rem
+	font-size: 1.5rem
+	font-weight: bold
+	background: var(--bgcolort)
+	
+	@media screen and(min-width: 768px)
+		width: 85%
+		line-height: 1.5
+		font-size: 2.5rem
+		letter-spacing: 0.01rem
+	@media screen and(min-width: 1000px)
+		line-height: 1.5
+		font-size: 3.5rem
+		
+		
+.bgnosotros
+	+bgimagenes("montain-s.jpg")
+	@media screen and(min-width: 768px)
+		+bgimagenes("montain-xlc.jpg")
+
+
+.article
+	align-self: center	
+	padding: 0.4rem 1rem
+	margin-top: 2rem
+	background: var(--bgcolort)
+	width: 95%
+	color: white
+	&:first-child
+		margin-top: 0.5rem
+	p
+		font-size: 0.9rem
+		line-height: 1.4
+	@media screen and(min-width: 768px)
+		width: 60%
+		&:first-child
+			margin-top: 4rem
+		p	
+			font-size: 1.4rem
+			line-height: 1.4
+		
+	
+.bgservicios		
+	+bgimagenes("servicios-s.jpg")
+	@media screen and(min-width: 768px)
+		+bgimagenes("servicios-xl.jpg")
+	
+.gallery
+	display: flex
+	flex-wrap: wrap
+	align-self: center
+	width: 90vw
+	height: 60vh
+	justify-content: center
+	@media screen and(min-width: 768px)
+		margin-top: 90px
+.item
+	display: flex
+	position: relative
+	justify-content: center
+	align-items: center
+	flex-basis: 100%
+	max-height: 4rem
+	background: rgba(102,0,0,0.8)
+	@media screen and(min-width: 768px)
+		margin: auto 10px
+	
+	&:hover
+		background: #000
+	@media screen and(min-width: 768px)
+		justify-content: center
+		flex-basis: 45%
+		max-height: 8rem
+		.item:hover
+			z-index: 2
+			background: #000
+
+.service
+	font-weight: bold
+	position: absolute
+	font-size: 1rem
+	text-transform: uppercase
+	align-self: center
+	color: var(--primary)
+	text-shadow: var(--txtshadow)
+	z-index: 1
+	text-align: center
+	background: transparent
+	@media screen and(min-width: 768px)
+		font-size: 1.8rem
+.image
+	position: relative
+	display: inline-block
+	height: 100%
+	opacity: 0.3
+	z-index: 500
+	
+.image:before
+	content: ''
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+.image img
+	display: block
+	width: 60%
+	height: 60%
+	@media screen and(min-width: 768px)
+		width: 100%
+		height: 100%
+		z-index: 100
+.image.featured
+	display: block
+	width: 100%
+	margin: 0 0 2em 0
+.image.fit
+	position: relative
+	display: block
+	width: 100%
+	z-index: 900
+	
+.bgexperiencia
+	+bgimagenes("calculator-s.jpg")
+	@media screen and(min-width: 768px)
+		+bgimagenes("calculator-xl.jpg")
+
+.cards
+	padding: 0.5rem
+	margin: 0.5rem 1rem
+	background: var(--bgcolort)
+	height: 40vh
+	color: white
+	&:last-child
+		margin-bottom: 0
+	p
+		font-size: 1rem
+		line-height: 1
+	@media screen and(min-width: 768px)
+		height: 50vh
+		p
+			font-size: 1.2rem
+			line-height: 1.2
+
+.contactos
+	background: #999
+	justify-content: center
+	padding-top: 3rem

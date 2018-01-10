@@ -1,0 +1,18 @@
+Configuracion GIT
+Para ver la configuracion ejecutar comando sin paramentros
+
+Nombre
+git config --global user.name "Pablo Castillo"
+
+Correo
+git config --global user.email "pablocastilloe@gmail.com"
+
+Colores
+git config --global color.ui true
+
+
+Listado de Configuraciones
+git config --global --list
+
+
+Monitoriar Proyecto
