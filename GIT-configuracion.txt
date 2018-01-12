@@ -15,4 +15,36 @@ Listado de Configuraciones
 git config --global --list
 
 
-Monitoriar Proyecto
+Monitoriar Proyecto (Establece carpeta a monitorear)
+git init
+
+Agregar archivos o carpetas para commit
+git add [archivo o carpeta]
+
+Confirmar Cambios en el Repositorio (commit)
+git commit -m "Comentario Descriptivo del Cambio"
+
+Listado de cambios del Repositorio
+git log
+
+Pasar a un archivo listado de commit
+git log > listado.txt
+
+Volver a una version anterior (muestra los archivos anteriores) usando el sha1 de los commit
+git checkout [sha1]
+
+Para volver al ultimo commit
+git checkout master
+
+Eliminar commits (No los archivos) desde el sha1 escogido
+git reset --soft [sha1]
+
+Eliminar commits y archivos desde el sha1 escogido hacia adelante (Archivos Eliminados Permanentemente )
+git reset --hard [sha1]
+
+
+Ayda
+git --help 
+
+Crear Ramas de DEsarrollo (branch)
+
