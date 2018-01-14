@@ -646,7 +646,7 @@ h3 {
   background-size: 100% 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen {
   .bgintro {
     background: url("../images/inicio-xl.jpg");
     background-attachment: scroll;

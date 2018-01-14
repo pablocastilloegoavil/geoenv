@@ -6,7 +6,7 @@
 @import "modules/form"
 //POPUP TRABAJA CON JQUERY
 @import "modules/poptrox"
-
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
 
 /* Basic */
 @-ms-viewport
@@ -240,7 +240,7 @@ h3
 ///* Intro */
 .bgintro
 	+bgimagenes("inicio-s.jpg")
-	@media screen and(min-width: 768px)
+	@media screen #{$tablet}
 		+bgimagenes("inicio-xl.jpg")
 
 .lema
