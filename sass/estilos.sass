@@ -62,10 +62,10 @@ h2
 h3
 	font-size: 1rem
 	line-height: 1
-	color: #999
+	color: #ddd
 	@media screen and(min-width: 768px)
 		font-size: 1.6rem
-		line-height: 1.6
+		line-height: 1
 		padding-bottom: 0.5em
 
 .active
@@ -114,8 +114,8 @@ h3
 	background: black
 
 .direccion p
-	font-size: 1rem
-	line-height: 1
+	font-size: 0.9rem
+	line-height: 1.3
 
 .mapa
 	padding: 10px 3px 0 3px
@@ -275,7 +275,7 @@ h3
 	align-self: center	
 	padding: 0.4rem 1rem
 	margin-top: 2rem
-	background: var(--bgcolort)
+	background: rgba(102,0,0,0.8)
 	width: 95%
 	color: white
 	&:first-child
@@ -373,9 +373,9 @@ h3
 	z-index: 900
 	
 .bgexperiencia
-	+bgimagenes("calculator-s.jpg")
+	+bgimagenes("experiencia-s.jpg")
 	@media screen and(min-width: 768px)
-		+bgimagenes("calculator-xl.jpg")
+		+bgimagenes("experiencia-xl.jpg")
 
 .cards
 	padding: 0.5rem
@@ -385,14 +385,20 @@ h3
 	color: white
 	&:last-child
 		margin-bottom: 0
+
 	p
 		font-size: 1rem
 		line-height: 1
 	@media screen and(min-width: 768px)
 		height: 50vh
+		h3
+			font-size: 1.6rem
+			line-height: 1
+			color: #ddd
 		p
 			font-size: 1.2rem
 			line-height: 1.2
+			padding: 0 1rem
 
 .contactos
 	background: #999

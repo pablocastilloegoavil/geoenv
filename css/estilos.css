@@ -302,7 +302,7 @@ html body {
   --secondary: #111111;
   --bgcolor1: #660000;
   --bgcolor2: #FFFFFF;
-  --bgcolort: rgba(102, 0, 0, 0.8);
+  --bgcolort: rgba(102, 0, 0, 0.7);
   --txtshadow: 5px 5px 1px #111111;
 }
 
@@ -371,13 +371,13 @@ h2 {
 h3 {
   font-size: 1rem;
   line-height: 1;
-  color: #999;
+  color: #ddd;
 }
 
 @media screen and (min-width: 768px) {
   h3 {
     font-size: 1.6rem;
-    line-height: 1.6;
+    line-height: 1;
     padding-bottom: 0.5em;
   }
 }
@@ -466,8 +466,8 @@ h3 {
 }
 
 .direccion p {
-  font-size: 1rem;
-  line-height: 1;
+  font-size: 0.9rem;
+  line-height: 1.3;
 }
 
 .mapa {
@@ -708,7 +708,7 @@ h3 {
       align-self: center;
   padding: 0.4rem 1rem;
   margin-top: 2rem;
-  background: var(--bgcolort);
+  background: rgba(102, 0, 0, 0.8);
   width: 95%;
   color: white;
 }
@@ -881,7 +881,7 @@ h3 {
 }
 
 .bgexperiencia {
-  background: url("../images/calculator-s.jpg");
+  background: url("../images/experiencia-s.jpg");
   background-attachment: scroll;
   background-position: top center;
   background-repeat: no-repeat;
@@ -890,7 +890,7 @@ h3 {
 
 @media screen and (min-width: 768px) {
   .bgexperiencia {
-    background: url("../images/calculator-xl.jpg");
+    background: url("../images/experiencia-xl.jpg");
     background-attachment: scroll;
     background-position: top center;
     background-repeat: no-repeat;
@@ -919,9 +919,15 @@ h3 {
   .cards {
     height: 50vh;
   }
+  .cards h3 {
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #ddd;
+  }
   .cards p {
     font-size: 1.2rem;
     line-height: 1.2;
+    padding: 0 1rem;
   }
 }
 
